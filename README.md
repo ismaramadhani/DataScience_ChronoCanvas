@@ -30,9 +30,8 @@ DataScience_ChronoCanvas
 │   └── dataset_ai_pengetahuan_umum.csv
 │
 ├── README.md
-├── Salinan_dari_ChronoCanvas_fix.ipynb
+├── ChronoCanvas_fix.ipynb
 ├── app.py
-├── backup.py
 └── requirements.txt
 ```
 
@@ -61,11 +60,7 @@ Berisi dataset yang telah melalui proses preprocessing dan pembersihan data.
 
 File utama aplikasi yang menjalankan sistem dan antarmuka pengguna.
 
-### `backup.py`
-
-File cadangan pengembangan aplikasi.
-
-### `Salinan_dari_ChronoCanvas_fix.ipynb`
+### `ChronoCanvas_fix.ipynb`
 
 Notebook yang digunakan untuk eksplorasi data, eksperimen model, dan pengembangan sistem.
 
@@ -172,7 +167,7 @@ Membangun platform edukasi berbasis Artificial Intelligence yang mampu membantu 
 
 ## 👨‍💻 Tim Pengembang
 
-- Isma Yafa Nur Zamzami Ramadhani
+- Isma' Yafa Nur Zamzami Ramadhani
 - Yahya Ahmad
 
 ---
