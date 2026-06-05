@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import re
 from pathlib import Path
 
@@ -505,6 +504,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-	
-
->>>>>>> 202dfea4f534519f20a5b1f0c6d1e01bf9162881
