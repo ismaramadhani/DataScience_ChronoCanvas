@@ -22,9 +22,6 @@ Aplikasi ini dirancang untuk membantu guru, siswa, maupun masyarakat umum dalam 
 ```text
 DataScience_ChronoCanvas
 │
-├── .devcontainer/
-│   └── devcontainer.json
-│
 ├── Data Clean/
 │   └── cleaned_data.csv
 │
