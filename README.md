@@ -121,6 +121,13 @@ streamlit run app.py
 
 ---
 
+Link Deploy Streamlit
+
+```bash
+(https://dschronocanvas.streamlit.app/)
+```
+
+
 ## 📊 Dataset
 
 Project ini memanfaatkan dataset yang berisi:
