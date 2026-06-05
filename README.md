@@ -124,7 +124,7 @@ streamlit run app.py
 Link Deploy Streamlit
 
 ```bash
-(https://dschronocanvas.streamlit.app/)
+https://dschronocanvas.streamlit.app/
 ```
 
 
