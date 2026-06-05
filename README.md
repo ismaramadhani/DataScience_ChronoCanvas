@@ -1,151 +1,97 @@
-# 📊 DataScience ChronoCanvas
+# 🧠 DataScience ChronoCanvas
 
-> Transforming data into meaningful stories through analytics, visualization, and machine learning.
+ChronoCanvas merupakan aplikasi berbasis Python yang memanfaatkan teknologi Data Science untuk menghasilkan konten edukasi secara otomatis berdasarkan prompt yang diberikan pengguna.
 
-## 📖 Overview
-
-DataScience ChronoCanvas merupakan proyek Data Science yang bertujuan untuk melakukan analisis data, eksplorasi pola, visualisasi informasi, serta pengembangan model prediktif untuk menghasilkan insight yang bermanfaat dalam pengambilan keputusan.
-
-Project ini mencakup proses lengkap data science mulai dari:
-
-- Data Collection
-- Data Cleaning & Preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Data Visualization
-- Machine Learning Modeling
-- Model Evaluation
-- Insight Generation
+Aplikasi ini dirancang untuk membantu guru, siswa, maupun masyarakat umum dalam memperoleh materi pengetahuan umum dan kecerdasan buatan (Artificial Intelligence) secara cepat, interaktif, dan mudah dipahami.
 
 ---
 
-## 🎯 Objectives
+## 🚀 Fitur Utama
 
-- Menganalisis dataset untuk menemukan pola dan tren yang tersembunyi.
-- Membuat visualisasi yang informatif dan mudah dipahami.
-- Mengembangkan model machine learning untuk prediksi atau klasifikasi.
-- Memberikan insight berbasis data yang dapat digunakan sebagai dasar pengambilan keputusan.
+- 📚 Generate materi pembelajaran berdasarkan prompt
+- 🤖 Pemanfaatan teknologi Artificial Intelligence
+- 📊 Pengolahan dataset pengetahuan umum Indonesia
+- 🧹 Data preprocessing dan cleaning
+- 🌐 Antarmuka web sederhana dan mudah digunakan
+- ⚡ Respon cepat dan interaktif
 
 ---
 
-## 🛠️ Tech Stack
+## 📂 Struktur Project
 
-### Programming Language
+```text
+DataScience_ChronoCanvas
+│
+├── .devcontainer/
+│   └── devcontainer.json
+│
+├── Data Clean/
+│   └── cleaned_data.csv
+│
+├── data/
+│   ├── dataset_ai_indonesia_500.csv
+│   └── dataset_ai_pengetahuan_umum.csv
+│
+├── README.md
+├── Salinan_dari_ChronoCanvas_fix.ipynb
+├── app.py
+├── backup.py
+└── requirements.txt
+```
 
-- Python 3.x
+---
 
-### Libraries
+## 📁 Deskripsi Folder
+
+### `data/`
+
+Berisi dataset utama yang digunakan dalam proses analisis dan pembangkitan konten.
+
+| File | Deskripsi |
+|--------|-----------|
+| dataset_ai_indonesia_500.csv | Dataset pengetahuan AI berbahasa Indonesia |
+| dataset_ai_pengetahuan_umum.csv | Dataset pengetahuan umum sebagai sumber informasi |
+
+### `Data Clean/`
+
+Berisi dataset yang telah melalui proses preprocessing dan pembersihan data.
+
+| File | Deskripsi |
+|--------|-----------|
+| cleaned_data.csv | Dataset hasil cleaning dan siap digunakan |
+
+### `app.py`
+
+File utama aplikasi yang menjalankan sistem dan antarmuka pengguna.
+
+### `backup.py`
+
+File cadangan pengembangan aplikasi.
+
+### `Salinan_dari_ChronoCanvas_fix.ipynb`
+
+Notebook yang digunakan untuk eksplorasi data, eksperimen model, dan pengembangan sistem.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+### Bahasa Pemrograman
+
+- Python
+
+### Library
 
 - Pandas
 - NumPy
+- Scikit-Learn
+- Flask / Streamlit
 - Matplotlib
 - Seaborn
-- Scikit-Learn
-- Plotly
-- XGBoost (optional)
-
-### Development Environment
-
-- Jupyter Notebook
-- Google Colab
-- VS Code
 
 ---
 
-## 📂 Project Structure
-
-```bash
-DataScience_ChronoCanvas/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_eda.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   └── 04_modeling.ipynb
-│
-├── models/
-│   └── saved_model.pkl
-│
-├── visualizations/
-│   ├── charts/
-│   └── dashboards/
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── training.py
-│   └── evaluation.py
-│
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
-
----
-
-## 📊 Exploratory Data Analysis
-
-Tahapan EDA dilakukan untuk:
-
-- Memahami karakteristik data
-- Menangani missing values
-- Mendeteksi outlier
-- Menganalisis distribusi data
-- Mengidentifikasi korelasi antar fitur
-
-Visualisasi yang digunakan:
-
-- Histogram
-- Boxplot
-- Heatmap Correlation
-- Scatter Plot
-- Time Series Visualization
-
----
-
-## ⚙️ Machine Learning Workflow
-
-```text
-Data Collection
-      ↓
-Data Cleaning
-      ↓
-Feature Engineering
-      ↓
-Train-Test Split
-      ↓
-Model Training
-      ↓
-Model Evaluation
-      ↓
-Prediction & Insight
-```
-
----
-
-## 📈 Evaluation Metrics
-
-### Classification
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
-
-### Regression
-
-- MAE
-- MSE
-- RMSE
-- R² Score
-
----
-
-## 🚀 Installation
+## ⚙️ Instalasi
 
 Clone repository:
 
@@ -159,7 +105,7 @@ Masuk ke folder project:
 cd DataScience_ChronoCanvas
 ```
 
-Install dependencies:
+Install dependency:
 
 ```bash
 pip install -r requirements.txt
@@ -167,64 +113,73 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Usage
+## ▶️ Menjalankan Aplikasi
 
-Jalankan notebook secara berurutan:
-
-```bash
-01_data_cleaning.ipynb
-02_eda.ipynb
-03_feature_engineering.ipynb
-04_modeling.ipynb
-```
-
-Atau jalankan script Python:
+Jika menggunakan Flask:
 
 ```bash
-python src/training.py
+python app.py
+```
+
+Jika menggunakan Streamlit:
+
+```bash
+streamlit run app.py
 ```
 
 ---
 
-## 📌 Features
+## 📊 Dataset
 
-- ✅ Data Cleaning & Preprocessing
-- ✅ Exploratory Data Analysis (EDA)
-- ✅ Feature Engineering
-- ✅ Interactive Visualization
-- ✅ Machine Learning Modeling
-- ✅ Model Evaluation
-- ✅ Insight Reporting
+Project ini memanfaatkan dataset yang berisi:
+
+- Pengetahuan umum
+- Materi Artificial Intelligence
+- Informasi edukatif berbahasa Indonesia
+
+Dataset kemudian melalui tahapan:
+
+1. Data Collection
+2. Data Cleaning
+3. Data Transformation
+4. Data Processing
+5. Knowledge Generation
 
 ---
 
-## 📷 Sample Output
+## 🔄 Workflow Sistem
 
-Tambahkan hasil visualisasi atau dashboard di sini.
-
-```markdown
-![Dashboard](images/dashboard.png)
-
-![Correlation Heatmap](images/heatmap.png)
-
-![Model Performance](images/model_performance.png)
+```text
+User Prompt
+      │
+      ▼
+Data Processing
+      │
+      ▼
+Knowledge Retrieval
+      │
+      ▼
+AI Generation
+      │
+      ▼
+Output Materi Pembelajaran
 ```
 
 ---
 
-## 🤝 Contributors
+## 🎯 Tujuan Project
+
+Membangun platform edukasi berbasis Artificial Intelligence yang mampu membantu pengguna memperoleh materi pembelajaran secara cepat, relevan, dan mudah dipahami.
+
+---
+
+## 👨‍💻 Tim Pengembang
 
 - Ismar Ramadhani
-- DataScience ChronoCanvas Team
+- Kontributor DataScience ChronoCanvas
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License.
-
----
-
-## 🌟 Acknowledgements
-
-Terima kasih kepada komunitas open-source dan seluruh pihak yang berkontribusi dalam pengembangan project ini.
+Project ini dibuat untuk kebutuhan pembelajaran, penelitian, dan pengembangan teknologi pendidikan berbasis Artificial Intelligence.
