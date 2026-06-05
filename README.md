@@ -6,17 +6,6 @@ Aplikasi ini dirancang untuk membantu guru, siswa, maupun masyarakat umum dalam 
 
 ---
 
-## 🚀 Fitur Utama
-
-- 📚 Generate materi pembelajaran berdasarkan prompt
-- 🤖 Pemanfaatan teknologi Artificial Intelligence
-- 📊 Pengolahan dataset pengetahuan umum Indonesia
-- 🧹 Data preprocessing dan cleaning
-- 🌐 Antarmuka web sederhana dan mudah digunakan
-- ⚡ Respon cepat dan interaktif
-
----
-
 ## 📂 Struktur Project
 
 ```text
@@ -146,39 +135,9 @@ Dataset kemudian melalui tahapan:
 
 ---
 
-## 🔄 Workflow Sistem
-
-```text
-User Prompt
-      │
-      ▼
-Data Processing
-      │
-      ▼
-Knowledge Retrieval
-      │
-      ▼
-AI Generation
-      │
-      ▼
-Output Materi Pembelajaran
-```
-
----
-
-## 🎯 Tujuan Project
-
-Membangun platform edukasi berbasis Artificial Intelligence yang mampu membantu pengguna memperoleh materi pembelajaran secara cepat, relevan, dan mudah dipahami.
-
----
-
 ## 👨‍💻 Tim Pengembang
 
 - Isma' Yafa Nur Zamzami Ramadhani
 - Yahya Ahmad
 
 ---
-
-## 📜 License
-
-Project ini dibuat untuk kebutuhan pembelajaran, penelitian, dan pengembangan teknologi pendidikan berbasis Artificial Intelligence.
