@@ -72,7 +72,6 @@ def show_data_pipeline_stages(df_raw):
 	"""Menampilkan setiap tahapan transformasi data"""
 	st.subheader('📊 Pipeline Transformasi Data: Dari Mentah ke Matang')
 	
-	# Stage 1: Raw Data
 	st.markdown('**Tahap 1: Data Mentah (Raw)**')
 	df_stage1 = df_raw.copy()
 	col1, col2, col3, col4 = st.columns(4)
@@ -88,7 +87,6 @@ def show_data_pipeline_stages(df_raw):
 	with st.expander('Lihat Sample Data Mentah'):
 		st.dataframe(df_stage1.head(5))
 	
-	# Stage 2: Drop NA
 	st.markdown('**Tahap 2: Menghapus Missing Values**')
 	df_stage2 = df_stage1.dropna()
 	col1, col2, col3 = st.columns(3)
@@ -99,7 +97,6 @@ def show_data_pipeline_stages(df_raw):
 	with col3:
 		st.metric('Missing Values Sekarang', f"{df_stage2.isnull().sum().sum():,}")
 	
-	# Stage 3: Clean Text
 	st.markdown('**Tahap 3: Pembersihan Teks Deskripsi**')
 	df_stage3 = df_stage2.copy()
 	df_stage3['deskripsi'] = df_stage3['deskripsi'].apply(bersihkan_teks_deskripsi)
@@ -110,7 +107,6 @@ def show_data_pipeline_stages(df_raw):
 		})
 		st.dataframe(comparison_df)
 	
-	# Stage 4: Drop Duplicates Deskripsi
 	st.markdown('**Tahap 4: Menghapus Duplikasi Deskripsi**')
 	df_stage4 = df_stage3.drop_duplicates(subset=['deskripsi'])
 	col1, col2 = st.columns(2)
@@ -119,7 +115,6 @@ def show_data_pipeline_stages(df_raw):
 	with col2:
 		st.metric('Sisa Baris', f"{len(df_stage4):,}")
 	
-	# Stage 5: Upgrade Image URLs
 	st.markdown('**Tahap 5: Upgrade URL Gambar (Thumbnail → HD)**')
 	df_stage5 = df_stage4.copy()
 	df_stage5['link_gambar'] = df_stage5['link_gambar'].apply(upgrade_ke_gambar_hd)
@@ -137,7 +132,6 @@ def show_data_pipeline_stages(df_raw):
 		})
 		st.dataframe(upgrade_samples)
 	
-	# Stage 6: Standardize Category
 	st.markdown('**Tahap 6: Standarisasi Kategori Mata Pelajaran**')
 	df_stage6 = df_stage5.copy()
 	df_stage6['mata_pelajaran'] = df_stage6['mata_pelajaran'].astype(str).str.strip().str.title()
@@ -161,7 +155,6 @@ def show_data_pipeline_stages(df_raw):
 	with st.expander('Lihat Distribusi Kategori'):
 		st.bar_chart(df_stage6['mata_pelajaran'].value_counts())
 	
-	# Stage 7: Group by nama_kunci
 	st.markdown('**Tahap 7: Penggabungan Data per Nama Kunci**')
 	df_stage7 = df_stage6.groupby('nama_kunci').agg(
 		mata_pelajaran=('mata_pelajaran', 'first'),
@@ -177,7 +170,6 @@ def show_data_pipeline_stages(df_raw):
 	with col3:
 		st.metric('Baris Digabung', f"{len(df_stage6) - len(df_stage7):,}", delta=f"-{len(df_stage6) - len(df_stage7)}")
 	
-	# Stage 8: Feature Engineering
 	st.markdown('**Tahap 8: Feature Engineering (Data Matang/Final)**')
 	df_stage8 = df_stage7.copy()
 	df_stage8['panjang_deskripsi'] = df_stage8['deskripsi'].str.len()
@@ -198,7 +190,6 @@ def show_data_pipeline_stages(df_raw):
 	
 	st.divider()
 
-
 def plot_count_mata_pelajaran(df):
 	fig, ax = plt.subplots(figsize=(10, 6))
 	order = df['mata_pelajaran'].value_counts().index
@@ -209,7 +200,6 @@ def plot_count_mata_pelajaran(df):
 	plt.tight_layout()
 	return fig
 
-
 def plot_box_panjang_deskripsi(df):
 	fig, ax = plt.subplots(figsize=(12, 7))
 	sns.boxplot(x='panjang_deskripsi', y='mata_pelajaran', data=df, palette='pastel', ax=ax)
@@ -218,7 +208,6 @@ def plot_box_panjang_deskripsi(df):
 	ax.set_ylabel('Mata Pelajaran')
 	plt.tight_layout()
 	return fig
-
 
 def plot_hist_image_usage(df):
 	counts = df['link_gambar'].value_counts()
@@ -231,7 +220,6 @@ def plot_hist_image_usage(df):
 	plt.tight_layout()
 	return fig, counts
 
-
 def plot_top_duplicates_distribution(df, counts, top_n=5):
 	top_links = counts[counts > 1].head(top_n).index
 	df_top = df[df['link_gambar'].isin(top_links)]
@@ -243,7 +231,6 @@ def plot_top_duplicates_distribution(df, counts, top_n=5):
 	plt.tight_layout()
 	return fig, distribusi
 
-
 def main():
 	st.title('Dashboard: Insight & Kesimpulan — ChronoCanvas Dataset')
 	st.markdown('Interactive dashboard yang merangkum insight dan kesimpulan dari notebook Anda.')
@@ -251,7 +238,6 @@ def main():
 	df_raw = load_raw_data()
 	df = clean_and_feature_engineer(df_raw.copy())
 
-	# Sidebar
 	st.sidebar.header('Filter & Pilihan')
 	show_raw = st.sidebar.checkbox('Tampilkan data mentah', value=False)
 	show_pipeline = st.sidebar.checkbox('Tampilkan Pipeline Transformasi Data', value=True)
