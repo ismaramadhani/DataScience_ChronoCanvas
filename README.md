@@ -172,7 +172,7 @@ Membangun platform edukasi berbasis Artificial Intelligence yang mampu membantu 
 
 ## 👨‍💻 Tim Pengembang
 
-- Ismar Ramadhani
+- Isma Yafa Nur Zamzami Ramadhani
 - Yahya Ahmad
 
 ---
