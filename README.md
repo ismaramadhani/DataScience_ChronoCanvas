@@ -176,7 +176,7 @@ Membangun platform edukasi berbasis Artificial Intelligence yang mampu membantu 
 ## 👨‍💻 Tim Pengembang
 
 - Ismar Ramadhani
-- Kontributor DataScience ChronoCanvas
+- Yahya Ahmad
 
 ---
 
